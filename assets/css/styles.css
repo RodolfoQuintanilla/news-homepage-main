@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2rem 0 2rem 2rem ;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  color: #272727;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.logo-header img {
+  width: 50px;
+}
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+}
+.nav-menu li {
+  margin-right: 1rem;
+}
+.nav-menu a {
+  color: var(--Very-dark-blue);
+}
+.nav-menu a:hover {
+  color: var(--Soft-red);
+}
+
+.menu-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+}
+.menu-icon,
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .nav-menu ul {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: #222;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+  }
+  .nav-menu ul li {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .nav-menu ul li:last-child {
+    background: none;
+    padding: 1rem;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    transition: all 0.25s;
+  }
+}
+
+/* Fin de Menu */
+
+section{
+    display: grid;
+    grid-template-areas: 'img menu' ;
+    grid-template-rows: repeat(3,1fr);
+}
+
+
+.imagen{
+    grid-area: img;
+    width: 700px;
+}
+
+.imagen img{
+    width: 700px;
+    height: 300px;
+}
+
+.textos{
+    grid-area: menu;
+   
+}
+
+.cuatro{
+    background-color: var(--Very-dark-blue);
+    color: white;
+    width: 350px;
+    padding: 1.5rem;
+}
+.cuatro h2:nth-child(1){
+    color: var(--Soft-orange);
+}
+
+/* Pie */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
